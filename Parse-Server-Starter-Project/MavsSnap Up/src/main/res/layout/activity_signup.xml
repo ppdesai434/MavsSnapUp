@@ -22,7 +22,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="textNoSuggestions|textEmailAddress"
         android:ems="10"
         android:layout_marginTop="31dp"
         android:id="@+id/emailEditText"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/editPhone"
         android:hint="Please enter your phone number"
         android:layout_below="@+id/editName"
         android:layout_alignParentLeft="true"
@@ -89,7 +89,8 @@
         android:layout_toEndOf="@+id/loginbtn"
         android:layout_marginLeft="39dp"
         android:layout_marginStart="39dp"
-        android:id="@+id/signupbtn" />
+        android:id="@+id/signupbtn"
+        android:onClick="signup"/>
 
     <Button
         android:text="Login"
