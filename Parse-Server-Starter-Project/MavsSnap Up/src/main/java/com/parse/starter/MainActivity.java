@@ -12,18 +12,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Switch;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.parse.GetCallback;
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseAnalytics;
-import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 
@@ -69,28 +64,64 @@ public class MainActivity extends AppCompatActivity {
 //    });
 
 
-    ParseUser user = new ParseUser();
 
-    user.setUsername("anagar");
-    user.setPassword("nagar123");
-    user.put("mobile","123456789");
-    user.setEmail("aman@mavs.uta.edu");
-    user.put("name","Aman");
-    user.signUpInBackground(new SignUpCallback() {
-      @Override
-      public void done(ParseException e) {
-        if(e==null)
-        {
-          Log.i("Signup","Successful");
-        }
-        else{
-          Log.i("Signup","Failed " + e);
-        }
-      }
-    });
+
+//    ParseUser user = new ParseUser();
+//
+//    user.setUsername("tejaswi@mavs.uta.edu");
+//    user.setPassword("teja123");
+//    user.put("mobile","123456789");
+//    user.setEmail("tejaswi@mavs.uta.edu");
+//    user.put("name","Tejaswi");
+//    user.signUpInBackground(new SignUpCallback() {
+//      @Override
+//      public void done(ParseException e) {
+//        if(e==null)
+//        {
+//          Log.i("Signup","Successful");
+//        }
+//        else{
+//          Log.i("Signup","Failed " + e);
+//        }
+//      }
+//    });
 
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
+
+  public void signUp(View view){
+
+      Intent intent = new Intent(this, Signup.class);
+      startActivity(intent);
+
+  }
+
+
+    public void login(View myview){
+
+        EditText emailText = (EditText) findViewById(R.id.emailEditText);
+        EditText passwordText = (EditText) findViewById(R.id.passwordEditText);
+        if( emailText.getText().toString().matches("") || passwordText.getText().toString().matches("")){
+            Toast.makeText(this, "Username and password are required", Toast.LENGTH_SHORT).show();
+        }
+        else{
+
+            ParseUser user = new ParseUser();
+            user.logInInBackground(emailText.getText().toString(), passwordText.getText().toString(), new LogInCallback() {
+                @Override
+                public void done(ParseUser user, ParseException e) {
+                    if (user != null)
+                    {
+                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
+        }
+    }
 
 }
