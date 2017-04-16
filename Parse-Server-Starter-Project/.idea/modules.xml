@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MavsSnap Up/MavsSnap Up.iml" filepath="$PROJECT_DIR$/MavsSnap Up/MavsSnap Up.iml" />
       <module fileurl="file://$PROJECT_DIR$/Parse-Server-Starter-Project.iml" filepath="$PROJECT_DIR$/Parse-Server-Starter-Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" filepath="$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" />
     </modules>
   </component>
 </project>
