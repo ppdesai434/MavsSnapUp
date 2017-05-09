@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MavsSnap Up</string>
+    <string name="auth_failed">failed</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Search</string>
+    <string name="title_activity_profile">My Profile</string>
+    <string name="title_activity_add_item">Add Item</string>
+    <string name="title_activity_my_items">My Items</string>
+    <string name="title_activity_item_desc">Item Description</string>
+    <string name="title_activity_admin">Admin Console</string>
+    <string name="title_activity_search">Search Items</string>
+</resources>

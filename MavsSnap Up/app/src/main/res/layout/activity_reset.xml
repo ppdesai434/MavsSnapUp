@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="main.mavmarket.ResetActivity">
+
+
+    <EditText
+        android:id="@+id/etMavMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_edittext_1"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="mavmail"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btnResetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_btn_primary"
+        android:textColor="@color/fontLight"
+        android:text="SEND RESET LINK" />
+</LinearLayout>

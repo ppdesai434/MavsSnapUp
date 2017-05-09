@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="main.mavmarket.AddItemActivity"
+    tools:showIn="@layout/app_bar_add_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:layout_weight="1"
+            android:text="ADD ITEM"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext_1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="ITEM NAME"
+            android:inputType="none"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="55dp" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext_1"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="DESCRIPTION"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/etItemName"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext_1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="PRICE"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+        <Spinner
+            android:id="@+id/catSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnSold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn_primary"
+            android:layout_marginTop="20dp"
+            android:text="MARK AS SOLD"
+            android:textColor="@color/fontLight" />
+
+        <ImageView
+            android:id="@+id/imageItem"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/btnUploadImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_disabled" />
+
+        <Button
+            android:id="@+id/btnUploadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnPostItem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn_primary"
+            android:textColor="@color/fontLight"
+            android:text="TAKE IMAGE"
+            />
+
+        <Button
+            android:id="@+id/btnPostItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="31dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn_primary"
+            android:text="POST ITEM"
+            android:textColor="@color/fontLight"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="431dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="INTERESTED PEOPLE" />
+
+        <ListView
+            android:id="@+id/mInterested"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</ScrollView>
